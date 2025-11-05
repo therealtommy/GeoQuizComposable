@@ -79,7 +79,11 @@ fun GeoQuizApp(innerPadding: PaddingValues) {
                 textAlign = TextAlign.Center,
                 modifier = Modifier.padding(vertical = 32.dp),
             )
+        Row(
+            modifier = Modifier.fillMaxSize().padding(innerPadding),
+            horizontalArrangement = Arrangement.Center
 
+        ){
             if (!isAnswered) {
                 Button(
                     onClick = {
@@ -122,6 +126,8 @@ fun GeoQuizApp(innerPadding: PaddingValues) {
                     Text("Show Results")
                 }
             }
+        }
+
         }
         if (showResult) {
             AlertDialog(
