@@ -123,7 +123,13 @@ fun GeoQuizApp(innerPadding: PaddingValues) {
                 }
             }
         }
-
+        if (showResult) {
+            AlertDialog(
+                onDismissRequest = { showResult = false },
+                title = { Text("Quiz Finished!") },
+                text = {
+                    Text("Your score: $score out of ${questions.size}\n")
+                }
     }
 }
 
