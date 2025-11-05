@@ -129,7 +129,20 @@ fun GeoQuizApp(innerPadding: PaddingValues) {
                 title = { Text("Quiz Finished!") },
                 text = {
                     Text("Your score: $score out of ${questions.size}\n")
+                },
+                confirmButton = {
+                    Button(
+                        onClick = {
+                            showResult = false
+                            currentIndex = 0
+                            score = 0
+                            isAnswered = false
+                        }
+                    ) {
+                        Text("Restart Quiz")
+                    }
                 }
+            )
     }
 }
 
